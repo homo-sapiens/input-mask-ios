@@ -43,7 +43,7 @@ class OptionalValueState: State {
             case .Literal:
                 return CharacterSet.letters.isMember(character: char)
             case .AlphaNumeric:
-                return CharacterSet.alphanumerics.isMember(character: char)
+                return CharacterSet.alphanumerics.isMember(character: char) || char == "." || char == "@"
         }
     }
     
